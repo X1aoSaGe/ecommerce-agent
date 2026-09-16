@@ -1,0 +1,11 @@
+# Training dependency set.
+# - peft: LoRA/QLoRA adapters (needed locally AND on cloud).
+# - bitsandbytes: 4-bit QLoRA quantization — CLOUD only (Linux; not on Windows).
+# - trl is intentionally NOT used: SFT/DPO are hand-implemented in train/*.py
+#   so the masking and DPO loss are explicit and learnable.
+torch
+transformers
+datasets
+accelerate
+peft
+bitsandbytes
